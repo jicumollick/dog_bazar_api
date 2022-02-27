@@ -1,7 +1,4 @@
 
-
-
-
 const loadDog = () => {
     fetch('https://api.thedogapi.com/v1/breeds')
     .then(res => res.json())
@@ -11,9 +8,8 @@ const loadDog = () => {
 const displayDog = (dogs) => {
     const main = document.getElementById('main');
 
-    const first10Data = dogs.slice(0,10);
-
-    
+    const first10Data = dogs.slice(0,15);
+  
     for(let dog of first10Data){
         console.log(dog.image.url);
         
@@ -34,15 +30,7 @@ const displayDog = (dogs) => {
     </div>
       </div>
   </div>
-
-     
         `;
         main.appendChild(div);
-
     }
 }
-
-{/* <h2> ${dog.name} </h2>
-<p>${dog.temperament}</p>
-<h4>${dog.weight.imperial}</h4>
-<img src='${dog.image.url}' class= 'img-fluid'> */}
